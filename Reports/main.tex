@@ -85,7 +85,6 @@
     labelsep=period,
     skip=4pt
 }
-
 % ─── Page Header / Footer ────────────────────────────────────────────────────
 \pagestyle{fancy}
 \fancyhf{}
@@ -210,7 +209,7 @@ Photodiode Anode     & Pi Pin 6 (GND) & Direct wire \\
 
 \subsection{Receiver Circuit — UART Attempt (RX-UART)}
 
-To target 115,200\,bps using the Pi's hardware UART silicon, a two-transistor logic inverter was constructed. Q1 acted as a light-sensitive amplifier; Q2 inverted the output to satisfy the UART idle-high convention. This design was ultimately sidelined: without an analogue front-end (transimpedance amplifier, comparator), bare photodiodes are insufficiently immune to ambient light at the sub-microsecond timing resolution UART demands. The attempt nonetheless confirmed the necessity of an analogue signal-conditioning stage for high-speed optical links.
+To target 115,200\,bps using the Pi's hardware UART silicon, a two-transistor logic inverter was constructed. Q1 acted as a light-sensitive amplifier; Q2 inverted the output to satisfy the UART idle-high convention. This design was ultimately sidelined as even with an analogue front-end (op-amp) bare photodiodes are insufficiently immune to ambient light at the sub-microsecond timing resolution UART demands.
 
 % ═════════════════════════════════════════════════════════════════════════════
 \section{Software Evolution and Protocols}
